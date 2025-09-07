@@ -24,7 +24,12 @@ app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 csrf = CSRFProtect(app)
 
 # configure the database
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL", "sqlite:///resume.db")
+# Use SQLite by default for local development
+database_url = os.environ.get("DATABASE_URL", "sqlite:///resume.db")
+# Fix PostgreSQL URL format if using Heroku or similar
+if database_url and database_url.startswith("postgres://"):
+    database_url = database_url.replace("postgres://", "postgresql://", 1)
+app.config["SQLALCHEMY_DATABASE_URI"] = database_url
 app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
     "pool_recycle": 300,
     "pool_pre_ping": True,
