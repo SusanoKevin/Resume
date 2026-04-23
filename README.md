@@ -42,4 +42,4 @@ Visit `/admin` to access the content management system where you can:
 - **Education**: Academic background
 - **Skill**: Technical and soft skills with categories
 - **Project**: Portfolio projects
-- **ContactMessage**: Contact form submissions
+- **Contact Message**: Contact form submissions
