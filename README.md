@@ -37,7 +37,7 @@ Visit `/admin` to access the content management system where you can:
 
 ## Database Schema
 
-- **PersonalInfo**: Contact details and professional summary
+- **Personal Info**: Contact details and professional summary
 - **Experience**: Work history with timeline features
 - **Education**: Academic background
 - **Skill**: Technical and soft skills with categories
