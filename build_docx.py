@@ -1,6 +1,6 @@
 """
-Generates Resume_Susano Kevin Amala.docx from resume.json.
-Font: Times New Roman, black throughout. Target: 1 full page.
+Resume — clean single-column, accent-line template.
+Font: Times New Roman, black throughout. Target: 1 page.
 """
 
 import json
@@ -12,10 +12,11 @@ from docx.oxml import OxmlElement
 
 BLACK  = RGBColor(0, 0, 0)
 FONT   = "Times New Roman"
-BODY   = 11     # pt — body / bullets
-HEAD   = 11     # pt — section headers
-NAME_S = 14     # pt — name
-CONT_S = 10     # pt — contact line
+BODY   = 10.5
+NAME_S = 16
+TITLE_S = 11
+CONT_S = 10
+HEAD_S = 10.5
 USABLE_W_TWIPS = int(Inches(7.5).pt * 20)
 
 with open("/Users/susanokevinamalamahilmaran/Downloads/Projects/Resume/resume.json") as f:
@@ -25,8 +26,7 @@ MONTHS = ["Jan","Feb","Mar","Apr","May","Jun",
           "Jul","Aug","Sep","Oct","Nov","Dec"]
 
 def fmt_date(d):
-    if not d:
-        return ""
+    if not d: return ""
     y, m = d.split("-")
     return f"{MONTHS[int(m)-1]}. {y}"
 
@@ -69,37 +69,42 @@ def para(doc, align=WD_ALIGN_PARAGRAPH.LEFT, sb=0, sa=0):
     return p
 
 
+def add_border(p, side="bottom", sz="8", color="000000", val="single", space="2"):
+    pPr  = p._p.get_or_add_pPr()
+    pBdr = OxmlElement("w:pBdr")
+    el   = OxmlElement(f"w:{side}")
+    el.set(qn("w:val"),   val)
+    el.set(qn("w:sz"),    sz)
+    el.set(qn("w:space"), space)
+    el.set(qn("w:color"), color)
+    pBdr.append(el)
+    pPr.append(pBdr)
+
+
 def section_head(doc, title, sb=5):
     p = para(doc, sb=sb, sa=1)
-    pPr = p._p.get_or_add_pPr()
-    pBdr = OxmlElement("w:pBdr")
-    bot  = OxmlElement("w:bottom")
-    bot.set(qn("w:val"),   "single")
-    bot.set(qn("w:sz"),    "4")
-    bot.set(qn("w:space"), "1")
-    bot.set(qn("w:color"), "000000")
-    pBdr.append(bot)
-    pPr.append(pBdr)
-    run(p, title, bold=True, size=HEAD)
+    add_border(p, sz="4", space="1")
+    run(p, title, bold=True, size=HEAD_S)
 
 
-def right_tab_para(doc, left, right, lb=True, rb=False, sb=0, sa=0):
+def right_tab_para(doc, left, right, lb=True, rb=False, sb=0, sa=0,
+                   lsize=BODY, rsize=BODY):
     p = para(doc, sb=sb, sa=sa)
-    pPr = p._p.get_or_add_pPr()
+    pPr  = p._p.get_or_add_pPr()
     tabs = OxmlElement("w:tabs")
     tab  = OxmlElement("w:tab")
     tab.set(qn("w:val"), "right")
     tab.set(qn("w:pos"), str(USABLE_W_TWIPS))
     tabs.append(tab)
     pPr.append(tabs)
-    run(p, left,         bold=lb, size=BODY)
-    run(p, "\t" + right, bold=rb, size=BODY)
+    run(p, left,          bold=lb, size=lsize)
+    run(p, "\t" + right,  bold=rb, size=rsize)
 
 
-def bullet(doc, text, sa=0):
-    p = para(doc, sa=sa)
-    p.paragraph_format.left_indent       = Inches(0.22)
-    p.paragraph_format.first_line_indent = Inches(-0.16)
+def bullet(doc, text):
+    p = para(doc)
+    p.paragraph_format.left_indent       = Inches(0.2)
+    p.paragraph_format.first_line_indent = Inches(-0.15)
     run(p, "•  " + text, size=BODY)
 
 
@@ -108,52 +113,73 @@ def bullet(doc, text, sa=0):
 doc = setup_doc()
 
 # ── HEADER ───────────────────────────────────────────────────────
-p = para(doc, align=WD_ALIGN_PARAGRAPH.CENTER, sa=2)
+p = para(doc, sa=1)
 run(p, data["personal"]["name"], bold=True, size=NAME_S)
 
-p = para(doc, align=WD_ALIGN_PARAGRAPH.CENTER, sa=0)
+p = para(doc, sa=1)
+run(p, "Data Analyst  &  AI Engineer", italic=True, size=TITLE_S)
+
+# Contact line with thick bottom rule
+p = para(doc, sa=0)
+add_border(p, sz="12", space="3")
 contact = (f"{data['personal']['phone']}  |  {data['personal']['email']}  |  "
            f"linkedin.com/in/susano-kevin  |  github.com/SusanoKevin  |  Milwaukee, WI")
 run(p, contact, size=CONT_S)
 
 # ── PROFESSIONAL SUMMARY ─────────────────────────────────────────
-section_head(doc, "PROFESSIONAL SUMMARY", sb=6)
-p = para(doc, sa=1)
+section_head(doc, "PROFESSIONAL SUMMARY", sb=5)
+p = para(doc, sa=2)
 summary = (
     "M.S. graduate in Information Technology Management (Data Analytics & AI) from "
     "UW–Milwaukee, currently heading all Agentic AI development for the Excelsis360 "
     "education platform. Skilled in machine learning, autonomous agent design, and "
-    "delivering data-driven solutions using Python, scikit-learn, and Snowflake."
+    "full-stack AI application development using Python, LangChain, React, and Snowflake."
 )
 run(p, summary)
 
 # ── WORK EXPERIENCE ──────────────────────────────────────────────
 section_head(doc, "WORK EXPERIENCE")
 
-exp_bullets = {
-    "Excellerate Education Solutions": [
-        "Head all Agentic AI initiatives for the Excelsis360 platform, architecting autonomous agent systems that automate complex, multi-step educational workflows end-to-end",
-        "Designing and developing the Excelsis Attendance Agent — an AI agent to fully automate attendance tracking and eliminate manual data entry across the platform",
-        "Define the Agentic AI roadmap by identifying high-value automation targets, designing agent pipelines, and delivering working solutions directly into the live product",
-    ],
-    "Carroll University": [
-        "Provided first-level technical support and conducted end-user training sessions for campus software applications used by faculty, staff, and students",
-        "Managed help desk ticket queue, diagnosing and resolving hardware and software issues within defined SLA deadlines",
-        "Configured new workstations, maintained accurate service records, and assisted in system upgrade deployments across campus",
-    ],
-    "Cardinal Stritch University": [
-        "Trained and supervised student workers on essential job functions and task completion within the Track-IT help desk system",
-        "Served as primary escalation point for complex technology issues, providing guided resolution and clear communication to clients",
-    ],
-}
+exp_content = [
+    {
+        "company": "Excellerate Education Solutions",
+        "location": "IL",
+        "role": "Software Engineer Intern (Agentic AI)",
+        "start": "2026-01", "end": None, "current": True,
+        "bullets": [
+            "Head all Agentic AI initiatives for Excelsis360, architecting autonomous agent systems that automate complex, multi-step educational workflows end-to-end",
+            "Designing and developing the Excelsis Attendance Agent — an AI agent to fully automate attendance tracking and eliminate manual data entry across the platform",
+            "Define the Agentic AI roadmap by identifying high-value automation targets, designing agent pipelines, and delivering working solutions into the live product",
+        ],
+    },
+    {
+        "company": "Carroll University",
+        "location": "Waukesha, WI",
+        "role": "Help Desk Technician",
+        "start": "2023-09", "end": "2024-05", "current": False,
+        "bullets": [
+            "Provided first-level technical support and end-user training for campus software applications",
+            "Managed help desk ticket queue; configured workstations and assisted in system upgrade deployments",
+        ],
+    },
+    {
+        "company": "Cardinal Stritch University",
+        "location": "Milwaukee, WI",
+        "role": "Help Desk Technician",
+        "start": "2021-05", "end": "2023-05", "current": False,
+        "bullets": [
+            "Trained and supervised student workers; served as escalation point for complex technology issues",
+        ],
+    },
+]
 
-for i, exp in enumerate(data["experience"]):
-    end      = "Present" if exp["current"] else fmt_date(exp["end_date"])
-    date_str = f"{fmt_date(exp['start_date'])} – {end}"
-    label    = f"{exp['position']}  |  {exp['company']}, {exp['location']}"
-    sb = 4 if i > 0 else 0
+for i, exp in enumerate(exp_content):
+    end      = "Present" if exp["current"] else fmt_date(exp["end"])
+    date_str = f"{fmt_date(exp['start'])} – {end}"
+    label    = f"{exp['role']}  |  {exp['company']}, {exp['location']}"
+    sb = 3 if i > 0 else 0
     right_tab_para(doc, label, date_str, lb=True, sb=sb, sa=0)
-    for b in exp_bullets.get(exp["company"], []):
+    for b in exp["bullets"]:
         bullet(doc, b)
 
 # ── EDUCATION ────────────────────────────────────────────────────
@@ -167,9 +193,9 @@ edu_entries = [
 ]
 
 for i, (degree, institution, date) in enumerate(edu_entries):
-    sb = 3 if i > 0 else 0
-    right_tab_para(doc, degree, date, lb=True, sb=sb, sa=0)
-    p = para(doc, sa=0)
+    sb = 2 if i > 0 else 0
+    right_tab_para(doc, degree, date, lb=True, sb=sb)
+    p = para(doc)
     run(p, institution, italic=True)
 
 # ── SKILLS ───────────────────────────────────────────────────────
@@ -183,7 +209,7 @@ skill_lines = [
     ("Cloud & BI",            "Snowflake, SQL Server, Power BI, Excel, Microsoft Access"),
 ]
 for category, items in skill_lines:
-    p = para(doc, sa=1)
+    p = para(doc)
     run(p, category + ": ", bold=True)
     run(p, items)
 
@@ -195,35 +221,31 @@ projects = [
         "name":   "Churn Predictor Bot",
         "tech":   "Python, scikit-learn, Streamlit, SMOTE, Pandas",
         "github": "github.com/SusanoKevin/Churn-Predictor",
-        "bullets": [
-            "Built a Random Forest classifier tuned with GridSearchCV and SMOTE to handle class imbalance, achieving 80%+ accuracy on customer churn prediction",
-            "Developed a full preprocessing pipeline (missing data handling, encoding, scaling) and deployed the model as an interactive Streamlit app for real-time prediction and visualization",
-        ],
+        "bullet": "Random Forest classifier with GridSearchCV and SMOTE achieving 80%+ accuracy; deployed as an interactive Streamlit app for real-time churn prediction and visualization.",
     },
     {
         "name":   "Excelsis Attendance Agent",
-        "tech":   "Python, LangChain, LangGraph, FastAPI, MCP, Ollama",
+        "tech":   "Python, LangChain, LangGraph, FastAPI, React, TypeScript, MCP, Ollama",
         "github": "github.com/SusanoKevin/Excelsis-Attendance-Agent",
-        "bullets": [
-            "Building an AI agent to automate end-to-end attendance tracking for the Excelsis360 platform, designing multi-step agentic pipelines to handle workflows autonomously",
-        ],
+        "bullet": "Building an AI agent to automate end-to-end attendance tracking for the Excelsis360 platform using multi-step agentic pipelines.",
     },
 ]
 
 for i, proj in enumerate(projects):
-    sb = 3 if i > 0 else 0
-    p = para(doc, sb=sb, sa=0)
+    sb = 2 if i > 0 else 0
+    p = para(doc, sb=sb)
     run(p, proj["name"] + "  ", bold=True)
-    run(p, f"({proj['tech']})  —  {proj['github']}", italic=True)
-    for b in proj["bullets"]:
-        bullet(doc, b)
+    run(p, f"({proj['tech']})", italic=True, size=9.5)
+    p2 = para(doc)
+    p2.paragraph_format.left_indent = Inches(0.05)
+    run(p2, proj["github"], italic=True, size=9.5)
+    bullet(doc, proj["bullet"])
 
 # ── CERTIFICATIONS ───────────────────────────────────────────────
 section_head(doc, "CERTIFICATIONS")
 right_tab_para(doc,
                "Snowflake Platform Training  —  Snowflake, Inc.",
-               "Jun. 2025",
-               lb=False)
+               "Jun. 2025", lb=False)
 
 # ── Save ─────────────────────────────────────────────────────────
 out = ("/Users/susanokevinamalamahilmaran/Downloads/Projects/Resume/"
