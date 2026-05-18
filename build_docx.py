@@ -176,11 +176,11 @@ for i, (degree, institution, date) in enumerate(edu_entries):
 section_head(doc, "SKILLS")
 
 skill_lines = [
-    ("Programming Languages", "Python, SQL, JavaScript, HTML, CSS"),
+    ("Programming Languages", "Python, TypeScript, JavaScript, SQL, HTML, CSS"),
     ("Agentic AI",            "LangChain, LangGraph, MCP, Ollama"),
+    ("Frontend & APIs",       "React, Tailwind CSS, FastAPI, Streamlit"),
     ("Machine Learning",      "scikit-learn, Random Forest, SMOTE, GridSearchCV, Pandas, NumPy"),
-    ("APIs & Data Tools",     "FastAPI, Streamlit, Matplotlib, Seaborn, Power BI"),
-    ("Cloud & Platforms",     "Snowflake, SQL Server, Excel, Microsoft Access"),
+    ("Cloud & BI",            "Snowflake, SQL Server, Power BI, Excel, Microsoft Access"),
 ]
 for category, items in skill_lines:
     p = para(doc, sa=1)

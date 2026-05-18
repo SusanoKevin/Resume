@@ -84,8 +84,11 @@
   "skills": [
     { "name": "Python", "category": "Programming", "proficiency": 85 },
     { "name": "SQL", "category": "Programming", "proficiency": 82 },
+    { "name": "TypeScript", "category": "Programming", "proficiency": 68 },
     { "name": "JavaScript", "category": "Programming", "proficiency": 65 },
     { "name": "HTML / CSS", "category": "Programming", "proficiency": 70 },
+    { "name": "React", "category": "Frontend", "proficiency": 68 },
+    { "name": "Tailwind CSS", "category": "Frontend", "proficiency": 65 },
     { "name": "LangChain", "category": "Agentic AI", "proficiency": 75 },
     { "name": "LangGraph", "category": "Agentic AI", "proficiency": 75 },
     { "name": "MCP", "category": "Agentic AI", "proficiency": 70 },
