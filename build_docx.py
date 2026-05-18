@@ -12,11 +12,11 @@ from docx.oxml import OxmlElement
 
 BLACK  = RGBColor(0, 0, 0)
 FONT   = "Times New Roman"
-BODY   = 10.5
+BODY   = 12
 NAME_S = 16
 TITLE_S = 11
 CONT_S = 10
-HEAD_S = 10.5
+HEAD_S = 12
 USABLE_W_TWIPS = int(Inches(7.5).pt * 20)
 
 with open("/Users/susanokevinamalamahilmaran/Downloads/Projects/Resume/resume.json") as f:
