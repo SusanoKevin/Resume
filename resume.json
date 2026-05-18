@@ -12,15 +12,17 @@
   },
   "experience": [
     {
-      "position": "Software Engineer",
+      "position": "Software Engineer Intern (Agentic AI)",
       "company": "Excellerate Education Solutions",
       "location": "IL",
       "start_date": "2026-01",
       "end_date": null,
       "current": true,
-      "description": "Contributing to the design and development of the Excelsis360 application.",
+      "description": "Leading the design and implementation of Agentic AI solutions for the Excelsis360 education platform.",
       "achievements": [
-        "Studying design and build of the Excelsis360 platform to contribute to feature development"
+        "Heading all Agentic AI initiatives for Excelsis360, architecting autonomous agent systems that handle complex, multi-step educational workflows end-to-end",
+        "Developed the Excelsis Attendance Agent — a production AI agent that fully automates attendance tracking, eliminating manual overhead across the platform",
+        "Defining the Agentic AI roadmap: identifying high-value automation targets, designing agent pipelines, and delivering working solutions into the live product"
       ]
     },
     {
