@@ -69,8 +69,8 @@ def para(doc, align=WD_ALIGN_PARAGRAPH.LEFT, sb=0, sa=0):
     return p
 
 
-def section_head(doc, title, sb=8):
-    p = para(doc, sb=sb, sa=2)
+def section_head(doc, title, sb=6):
+    p = para(doc, sb=sb, sa=1)
     pPr = p._p.get_or_add_pPr()
     pBdr = OxmlElement("w:pBdr")
     bot  = OxmlElement("w:bottom")
@@ -96,7 +96,7 @@ def right_tab_para(doc, left, right, lb=True, rb=False, sb=0, sa=0):
     run(p, "\t" + right, bold=rb, size=BODY)
 
 
-def bullet(doc, text, sa=2):
+def bullet(doc, text, sa=1):
     p = para(doc, sa=sa)
     p.paragraph_format.left_indent       = Inches(0.22)
     p.paragraph_format.first_line_indent = Inches(-0.16)
@@ -118,14 +118,12 @@ run(p, contact, size=CONT_S)
 
 # ── PROFESSIONAL SUMMARY ─────────────────────────────────────────
 section_head(doc, "PROFESSIONAL SUMMARY", sb=6)
-p = para(doc, sa=2)
+p = para(doc, sa=1)
 summary = (
-    "M.S. candidate in Information Technology Management (Data Analytics & AI) at "
+    "M.S. graduate in Information Technology Management (Data Analytics & AI) from "
     "UW–Milwaukee, currently heading all Agentic AI development for the Excelsis360 "
-    "education platform. Experienced in designing and deploying machine learning models, "
-    "building autonomous agent pipelines, and delivering data-driven solutions using "
-    "Python, scikit-learn, and Snowflake. Proven ability to translate complex data problems "
-    "into production-ready AI systems that reduce manual overhead and drive measurable outcomes."
+    "education platform. Skilled in machine learning, autonomous agent design, and "
+    "delivering data-driven solutions using Python, scikit-learn, and Snowflake."
 )
 run(p, summary)
 
@@ -153,11 +151,10 @@ for i, exp in enumerate(data["experience"]):
     end      = "Present" if exp["current"] else fmt_date(exp["end_date"])
     date_str = f"{fmt_date(exp['start_date'])} – {end}"
     label    = f"{exp['position']}  |  {exp['company']}, {exp['location']}"
-    sb = 5 if i > 0 else 0
-    right_tab_para(doc, label, date_str, lb=True, sb=sb, sa=1)
-    bullets = exp_bullets.get(exp["company"], [])
-    for b in bullets:
-        bullet(doc, b, sa=1)
+    sb = 4 if i > 0 else 0
+    right_tab_para(doc, label, date_str, lb=True, sb=sb, sa=0)
+    for b in exp_bullets.get(exp["company"], []):
+        bullet(doc, b)
 
 # ── EDUCATION ────────────────────────────────────────────────────
 section_head(doc, "EDUCATION")
@@ -170,9 +167,9 @@ edu_entries = [
 ]
 
 for i, (degree, institution, date) in enumerate(edu_entries):
-    sb = 4 if i > 0 else 0
+    sb = 3 if i > 0 else 0
     right_tab_para(doc, degree, date, lb=True, sb=sb, sa=0)
-    p = para(doc, sa=1)
+    p = para(doc, sa=0)
     run(p, institution, italic=True)
 
 # ── SKILLS ───────────────────────────────────────────────────────
@@ -185,7 +182,7 @@ skill_lines = [
     ("Cloud & Data Platforms", "Snowflake, Excel, Microsoft Access"),
 ]
 for category, items in skill_lines:
-    p = para(doc, sa=2)
+    p = para(doc, sa=1)
     run(p, category + ": ", bold=True)
     run(p, items)
 
@@ -214,12 +211,12 @@ projects = [
 ]
 
 for i, proj in enumerate(projects):
-    sb = 4 if i > 0 else 0
+    sb = 3 if i > 0 else 0
     p = para(doc, sb=sb, sa=0)
     run(p, proj["name"] + "  ", bold=True)
     run(p, f"({proj['tech']})  —  {proj['github']}", italic=True)
     for b in proj["bullets"]:
-        bullet(doc, b, sa=1)
+        bullet(doc, b)
 
 # ── CERTIFICATIONS ───────────────────────────────────────────────
 section_head(doc, "CERTIFICATIONS")
