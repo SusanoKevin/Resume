@@ -266,15 +266,15 @@ Two-year stint in a high-volume campus IT environment — grew from support tech
 
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com/?user=SusanoKevin&theme=github-dark-blue&hide_border=true&background=0d1117&ring=00d4ff&fire=ff3c3c&currStreakLabel=00d4ff&sideLabels=00d4ff" width="60%"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=SusanoKevin&theme=dark&hide_border=true&background=0d1117&ring=00d4ff&fire=ff3c3c&currStreakLabel=00d4ff&sideLabels=00d4ff&dates=c9d1d9" width="60%"/>
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=SusanoKevin&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&column=7" width="98%"/>
+<img src="https://github-profile-trophy.vercel.app/?username=SusanoKevin&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&column=6" width="98%"/>
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=SusanoKevin&theme=github-compact&hide_border=true&bg_color=0d1117&color=00d4ff&line=00d4ff&point=ff3c3c&area=true&area_color=00d4ff" width="98%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=SusanoKevin&theme=react-dark&hide_border=true&bg_color=0d1117&color=00d4ff&line=00d4ff&point=ff3c3c&area=true" width="98%"/>
 
 </div>
 
