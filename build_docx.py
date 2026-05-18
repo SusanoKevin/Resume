@@ -12,10 +12,10 @@ from docx.oxml import OxmlElement
 
 BLACK  = RGBColor(0, 0, 0)
 FONT   = "Times New Roman"
-BODY   = 11     # pt — body / bullets
-HEAD   = 11     # pt — section headers
-NAME_S = 15     # pt — name
-CONT_S = 10     # pt — contact line
+BODY   = 10.5   # pt — body / bullets
+HEAD   = 10.5   # pt — section headers
+NAME_S = 14     # pt — name
+CONT_S = 9.5    # pt — contact line
 USABLE_W_TWIPS = int(Inches(7.5).pt * 20)
 
 with open("/Users/susanokevinamalamahilmaran/Downloads/Projects/Resume/resume.json") as f:
@@ -133,7 +133,7 @@ section_head(doc, "WORK EXPERIENCE")
 exp_bullets = {
     "Excellerate Education Solutions": [
         "Head all Agentic AI initiatives for the Excelsis360 platform, architecting autonomous agent systems that automate complex, multi-step educational workflows end-to-end",
-        "Designed and shipped the Excelsis Attendance Agent — a production AI agent that fully eliminates manual attendance tracking, improving data accuracy across the platform",
+        "Designing and developing the Excelsis Attendance Agent — an AI agent to fully automate attendance tracking and eliminate manual data entry across the platform",
         "Define the Agentic AI roadmap by identifying high-value automation targets, designing agent pipelines, and delivering working solutions directly into the live product",
     ],
     "Carroll University": [
@@ -204,8 +204,7 @@ projects = [
         "tech":   "Python, Agentic AI",
         "github": "github.com/SusanoKevin/Excelsis-Attendance-Agent",
         "bullets": [
-            "Architected and shipped a production AI agent that automates end-to-end attendance tracking for the Excelsis360 education platform",
-            "Designed multi-step agentic pipelines that handle edge cases autonomously, eliminating manual data entry and reducing administrative overhead",
+            "Building an AI agent to automate end-to-end attendance tracking for the Excelsis360 platform, designing multi-step agentic pipelines to handle workflows autonomously",
         ],
     },
 ]
