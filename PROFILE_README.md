@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=18&duration=3000&pause=800&color=00D4FF&center=true&vCenter=true&width=700&lines=Extracting+signal+from+noise+since+2021;Random+Forest+%E2%80%A2+SMOTE+%E2%80%A2+GridSearchCV+%E2%80%A2+80%25%2B+Accuracy;Snowflake+%E2%80%A2+Python+%E2%80%A2+Streamlit+%E2%80%A2+Power+BI;M.S.+IT+Management+%E2%80%94+Data+Analytics+%26+AI+%7C+UW-Milwaukee;Current+Status%3A+ACTIVE+%E2%80%94+Excellerate+Education+Solutions)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=18&duration=3000&pause=800&color=00D4FF&center=true&vCenter=true&width=700&lines=Building+Agentic+AI+systems+for+Excelsis360;LangChain+%E2%80%A2+LangGraph+%E2%80%A2+FastAPI+%E2%80%A2+React+%E2%80%A2+TypeScript;Random+Forest+%E2%80%A2+SMOTE+%E2%80%A2+GridSearchCV+%E2%80%A2+80%25%2B+Accuracy;M.S.+IT+Management+%E2%80%94+Data+Analytics+%26+AI+%7C+UW-Milwaukee;Current+Status%3A+ACTIVE+%E2%80%94+Excellerate+Education+Solutions)](https://git.io/typing-svg)
 
 </div>
 
@@ -36,22 +36,22 @@ operative:
   status:       ACTIVE
 
 current_mission:
-  role:         "Software Engineer"
+  role:         "Software Engineer Intern (Agentic AI)"
   organization: "Excellerate Education Solutions"
-  objective:    "Build and evolve the Excelsis360 education platform"
+  objective:    "Head all Agentic AI development for the Excelsis360 platform"
   since:        "January 2026"
 
 credentials:
   - "M.S. Information Technology Management — Data Analytics & AI"
   - "  University of Wisconsin – Milwaukee  |  Dec 2025"
-  - "B.B.A. Business Administration — Communication Minor"
+  - "B.S. Business Administration — Communication Minor"
   - "  Carroll University  |  May 2024"
 
 specializations:
+  - Agentic AI & Autonomous Agent Systems
   - Machine Learning & Predictive Modeling
-  - Data Engineering & Pipeline Architecture
-  - AI Application Development
-  - Business Intelligence & Visualization
+  - Full-Stack AI Application Development
+  - Data Engineering & Business Intelligence
 
 directive:      "Turn raw data into decisive intelligence."
 ```
@@ -65,23 +65,38 @@ directive:      "Turn raw data into decisive intelligence."
 ### Core Languages
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### Agentic AI
+
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-00d4ff?style=for-the-badge&logoColor=white)
+
+### Frontend
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
 ### Data & Machine Learning
 
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/Seaborn-4c72b0?style=for-the-badge&logo=python&logoColor=white)
 
 ### Cloud, BI & Platforms
 
 ![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![Excel](https://img.shields.io/badge/Excel%20%2F%20Access-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
 
@@ -101,8 +116,13 @@ directive:      "Turn raw data into decisive intelligence."
 | Excel / Access | `████████░░` | 80% |
 | Matplotlib / Seaborn | `███████▒░░` | 78% |
 | Snowflake | `███████▒░░` | 78% |
+| LangChain / LangGraph | `███████░░░` | 75% |
+| FastAPI | `███████░░░` | 75% |
 | Streamlit | `███████░░░` | 75% |
+| React | `██████▓░░░` | 68% |
+| TypeScript | `██████▓░░░` | 68% |
 | Power BI | `███████░░░` | 72% |
+| SQL Server | `███████░░░` | 72% |
 | HTML / CSS | `███████░░░` | 70% |
 | JavaScript | `██████▒░░░` | 65% |
 
@@ -120,7 +140,7 @@ directive:      "Turn raw data into decisive intelligence."
 Leading the design and implementation of **Agentic AI solutions** for the **Excelsis360** education platform — the primary driver of the platform's intelligent automation capabilities.
 
 - Heading all Agentic AI initiatives for Excelsis360, architecting autonomous agent systems that handle complex, multi-step educational workflows end-to-end
-- Developed the **Excelsis Attendance Agent** — a production AI agent that fully automates attendance tracking, eliminating manual overhead across the platform
+- Designing and developing the **Excelsis Attendance Agent** — an AI agent to fully automate attendance tracking and eliminate manual data entry across the platform
 - Defining the Agentic AI roadmap: identifying high-value automation targets, designing agent pipelines, and delivering working solutions into the live product
 
 </details>
@@ -200,8 +220,8 @@ Two-year stint in a high-volume campus IT environment — grew from support tech
 
 </td>
 <td align="left"><b>Excelsis Attendance Agent</b></td>
-<td align="left">AI attendance automation agent integrated directly into the <b>Excelsis360</b> education platform. Automates end-to-end attendance workflows — reducing manual overhead and increasing data accuracy in live production.</td>
-<td align="left"><code>Python</code> <code>AI Automation</code> <code>Excelsis360</code></td>
+<td align="left">AI attendance automation agent in active development for the <b>Excelsis360</b> education platform. Designing multi-step agentic pipelines using LangChain and LangGraph to autonomously handle end-to-end attendance workflows.</td>
+<td align="left"><code>Python</code> <code>LangChain</code> <code>LangGraph</code> <code>FastAPI</code> <code>React</code> <code>TypeScript</code> <code>MCP</code> <code>Ollama</code></td>
 <td align="center">
 
 [![View](https://img.shields.io/badge/DEPLOY_%E2%86%92-00d4ff?style=flat-square)](https://github.com/SusanoKevin/Excelsis-Attendance-Agent)
@@ -239,7 +259,7 @@ Two-year stint in a high-volume campus IT environment — grew from support tech
 | Institution | Degree | Field | Period |
 |-------------|--------|-------|--------|
 | **University of Wisconsin – Milwaukee** | M.S. | Information Technology Management — *Data Analytics & AI* | Aug 2024 – Dec 2025 |
-| **Carroll University** | B.B.A. | Business Administration — *Communication Minor* | Aug 2020 – May 2024 |
+| **Carroll University** | B.S. | Business Administration — *Communication Minor* | Aug 2020 – May 2024 |
 
 </div>
 
