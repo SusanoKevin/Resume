@@ -42,6 +42,16 @@ The contact form uses [Formspree](https://formspree.io) (free):
 3. Go to repo **Settings → Pages → Source**: branch `main`, folder `/root`
 4. Your site goes live at `https://<your-github-username>.github.io`
 
+## GitHub Profile README
+
+`PROFILE_README.md` is the profile README for [github.com/SusanoKevin](https://github.com/SusanoKevin). It uses a "Data Phantom" cyberpunk theme with electric cyan branding, a YAML dossier bio, Unicode skill bars, collapsible experience sections, and GitHub stats widgets.
+
+To deploy it to your GitHub profile:
+
+1. Go to your `SusanoKevin/SusanoKevin` repository (create it if it doesn't exist — it must match your username exactly)
+2. Copy the contents of `PROFILE_README.md` into `README.md` in that repo
+3. Commit and push — GitHub renders it live at `github.com/SusanoKevin`
+
 ## Dependencies
 
 ```bash
