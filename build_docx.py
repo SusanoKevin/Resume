@@ -12,8 +12,8 @@ from docx.oxml import OxmlElement
 
 BLACK  = RGBColor(0, 0, 0)
 FONT   = "Times New Roman"
-BODY   = 10.5   # pt — body / bullets
-HEAD   = 10.5   # pt — section headers
+BODY   = 11.5   # pt — body / bullets
+HEAD   = 11.5   # pt — section headers
 NAME_S = 14     # pt — name
 CONT_S = 9.5    # pt — contact line
 USABLE_W_TWIPS = int(Inches(7.5).pt * 20)
@@ -162,7 +162,7 @@ section_head(doc, "EDUCATION")
 edu_entries = [
     ("M.S., Information Technology Management — Data Analytics & AI",
      "University of Wisconsin – Milwaukee", "Dec. 2025"),
-    ("B.B.A., Business Administration — Communication Minor",
+    ("B.S., Business Administration — Communication Minor",
      "Carroll University", "May 2024"),
 ]
 
