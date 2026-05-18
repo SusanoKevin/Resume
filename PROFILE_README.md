@@ -111,17 +111,17 @@ directive:      "Turn raw data into decisive intelligence."
 ## `[003]` MISSION LOG — FIELD EXPERIENCE
 
 <details>
-<summary><b>⚡ Software Engineer — Excellerate Education Solutions &nbsp;|&nbsp; Jan 2026 – Present &nbsp;|&nbsp; <code>ACTIVE DEPLOYMENT</code></b></summary>
+<summary><b>⚡ Software Engineer Intern (Agentic AI) — Excellerate Education Solutions &nbsp;|&nbsp; Jan 2026 – Present &nbsp;|&nbsp; <code>ACTIVE DEPLOYMENT</code></b></summary>
 
 <br/>
 
 > *Location: Illinois*
 
-Embedded with the product engineering team building the **Excelsis360** education platform — contributing to feature design, development, and AI-driven automation tooling.
+Leading the design and implementation of **Agentic AI solutions** for the **Excelsis360** education platform — the primary driver of the platform's intelligent automation capabilities.
 
-- Studying and internalizing the full architecture of the Excelsis360 platform to accelerate feature contributions
-- Developing the **Excelsis Attendance Agent** — an AI-powered automation system that handles attendance workflows end-to-end
-- Bridging the gap between raw platform needs and intelligent, automated solutions
+- Heading all Agentic AI initiatives for Excelsis360, architecting autonomous agent systems that handle complex, multi-step educational workflows end-to-end
+- Developed the **Excelsis Attendance Agent** — a production AI agent that fully automates attendance tracking, eliminating manual overhead across the platform
+- Defining the Agentic AI roadmap: identifying high-value automation targets, designing agent pipelines, and delivering working solutions into the live product
 
 </details>
 
