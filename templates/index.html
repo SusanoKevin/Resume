@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ personal.name if personal else 'Resume' }}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/resume.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./">
+                <i class="fas fa-user-circle me-2"></i>Resume
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" onclick="window.print()">
+                            <i class="fas fa-print me-1"></i>Print
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-8 mx-auto text-center">
+                        {% if personal %}
+                            <h1 class="display-4 fw-bold mb-3">{{ personal.name }}</h1>
+                            <p class="lead fs-3 text-info mb-4">{{ personal.title }}</p>
+                            <p class="fs-5 mb-4">{{ personal.summary or '' }}</p>
+
+                            <div class="contact-info mb-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-envelope me-2"></i>{{ personal.email }}
+                                    </div>
+                                    {% if personal.phone %}
+                                    <div class="col-auto">
+                                        <i class="fas fa-phone me-2"></i>{{ personal.phone }}
+                                    </div>
+                                    {% endif %}
+                                    {% if personal.location %}
+                                    <div class="col-auto">
+                                        <i class="fas fa-map-marker-alt me-2"></i>{{ personal.location }}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="social-links">
+                                {% if personal.linkedin_url %}
+                                <a href="{{ personal.linkedin_url }}" class="btn btn-outline-info me-2" target="_blank">
+                                    <i class="fab fa-linkedin me-2"></i>LinkedIn
+                                </a>
+                                {% endif %}
+                                {% if personal.github_url %}
+                                <a href="{{ personal.github_url }}" class="btn btn-outline-info me-2" target="_blank">
+                                    <i class="fab fa-github me-2"></i>GitHub
+                                </a>
+                                {% endif %}
+                                {% if personal.website_url %}
+                                <a href="{{ personal.website_url }}" class="btn btn-outline-info me-2" target="_blank">
+                                    <i class="fas fa-globe me-2"></i>Website
+                                </a>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">
+                    <i class="fas fa-briefcase me-3"></i>Professional Experience
+                </h2>
+
+                {% if experience %}
+                    <div class="timeline">
+                        {% for exp in experience %}
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{ exp.position }}</h4>
+                                        <h5 class="text-info mb-2">{{ exp.company }}</h5>
+                                        {% if exp.location %}
+                                        <p class="text-muted mb-2">
+                                            <i class="fas fa-map-marker-alt me-2"></i>{{ exp.location }}
+                                        </p>
+                                        {% endif %}
+                                        <p class="text-muted mb-3">
+                                            <i class="fas fa-calendar me-2"></i>
+                                            {{ exp.start_date_fmt or '' }} -
+                                            {% if exp.current %}Present{% else %}{{ exp.end_date_fmt or '' }}{% endif %}
+                                        </p>
+
+                                        {% if exp.description %}
+                                        <p class="card-text">{{ exp.description }}</p>
+                                        {% endif %}
+
+                                        {% if exp.achievements %}
+                                        <div class="achievements">
+                                            <h6 class="fw-bold">Key Achievements:</h6>
+                                            {% if exp.achievements is string %}
+                                                <div>{{ exp.achievements | replace('\n', '<br>') | safe }}</div>
+                                            {% else %}
+                                                <ul class="mb-0">
+                                                    {% for item in exp.achievements %}
+                                                    <li>{{ item }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="text-center">
+                        <p class="text-muted">No experience entries yet. Add them to resume.json.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-5 bg-dark">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">
+                    <i class="fas fa-graduation-cap me-3"></i>Education
+                </h2>
+
+                {% if education %}
+                    <div class="row">
+                        {% for edu in education %}
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ edu.degree }}</h5>
+                                    <h6 class="text-info mb-2">{{ edu.institution }}</h6>
+                                    {% if edu.field_of_study %}
+                                    <p class="text-muted mb-2">{{ edu.field_of_study }}</p>
+                                    {% endif %}
+                                    <p class="text-muted mb-2">
+                                        <i class="fas fa-calendar me-2"></i>
+                                        {{ edu.start_year or '' }} - {{ edu.end_year or '' }}
+                                    </p>
+                                    {% if edu.gpa %}
+                                    <p class="text-muted mb-2">
+                                        <i class="fas fa-star me-2"></i>GPA: {{ edu.gpa }}
+                                    </p>
+                                    {% endif %}
+                                    {% if edu.description %}
+                                    <p class="card-text">{{ edu.description }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="text-center">
+                        <p class="text-muted">No education entries yet. Add them to resume.json.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">
+                    <i class="fas fa-cogs me-3"></i>Skills & Expertise
+                </h2>
+
+                {% if skills_by_category %}
+                    {% for category, skills in skills_by_category.items() %}
+                    <div class="skill-category mb-5">
+                        <h4 class="text-center mb-4 text-info">{{ category }}</h4>
+                        <div class="row">
+                            {% for skill in skills %}
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <div class="skill-item">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="skill-name">{{ skill.name }}</span>
+                                        <span class="skill-percentage">{{ skill.proficiency }}%</span>
+                                    </div>
+                                    <div class="progress skill-progress">
+                                        <div class="progress-bar bg-info"
+                                             role="progressbar"
+                                             style="width: {{ skill.proficiency }}%"
+                                             data-skill="{{ skill.name }}"
+                                             data-proficiency="{{ skill.proficiency }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <!-- Skills Chart -->
+                    <div class="row mt-5">
+                        <div class="col-lg-6 mx-auto">
+                            <canvas id="skillsChart"></canvas>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="text-center">
+                        <p class="text-muted">No skills yet. Add them to resume.json.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-5 bg-dark">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">
+                    <i class="fas fa-code me-3"></i>Featured Projects
+                </h2>
+
+                {% if projects %}
+                    <div class="row">
+                        {% for project in projects %}
+                        <div class="col-lg-6 mb-4">
+                            <div class="card h-100 project-card{% if project.featured %} featured-project{% endif %}">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="card-title">{{ project.name }}</h5>
+                                        {% if project.featured %}
+                                        <span class="badge bg-info">Featured</span>
+                                        {% endif %}
+                                    </div>
+
+                                    {% if project.description %}
+                                    <p class="card-text">{{ project.description }}</p>
+                                    {% endif %}
+
+                                    {% if project.technologies %}
+                                    <div class="technologies mb-3">
+                                        <h6 class="fw-bold mb-2">Technologies:</h6>
+                                        <div class="tech-tags">
+                                            {% if project.technologies is string %}
+                                                {% for tech in project.technologies.split(',') %}
+                                                <span class="badge bg-secondary me-1 mb-1">{{ tech.strip() }}</span>
+                                                {% endfor %}
+                                            {% else %}
+                                                {% for tech in project.technologies %}
+                                                <span class="badge bg-secondary me-1 mb-1">{{ tech }}</span>
+                                                {% endfor %}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+
+                                    {% if project.start_date_fmt or project.end_date_fmt %}
+                                    <p class="text-muted mb-3">
+                                        <i class="fas fa-calendar me-2"></i>
+                                        {{ project.start_date_fmt or '' }}
+                                        {% if project.start_date_fmt and project.end_date_fmt %} - {% endif %}
+                                        {{ project.end_date_fmt or '' }}
+                                    </p>
+                                    {% endif %}
+
+                                    <div class="project-links">
+                                        {% if project.github_url %}
+                                        <a href="{{ project.github_url }}" class="btn btn-outline-info btn-sm me-2" target="_blank">
+                                            <i class="fab fa-github me-1"></i>GitHub
+                                        </a>
+                                        {% endif %}
+                                        {% if project.live_url %}
+                                        <a href="{{ project.live_url }}" class="btn btn-info btn-sm" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                                        </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="text-center">
+                        <p class="text-muted">No projects yet. Add them to resume.json.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">
+                    <i class="fas fa-envelope me-3"></i>Get In Touch
+                </h2>
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <!--
+                                    Contact form powered by Formspree (free).
+                                    To activate:
+                                    1. Sign up at https://formspree.io
+                                    2. Create a new form and copy your endpoint URL
+                                    3. Replace YOUR_FORMSPREE_ENDPOINT below with that URL
+                                       e.g. https://formspree.io/f/abcdefgh
+                                -->
+                                <form method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="name" class="form-label">Name *</label>
+                                            <input type="text" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Email *</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject" name="subject">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message *</label>
+                                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-info btn-lg">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom JS -->
+    <script src="static/js/resume.js"></script>
+
+    {% if skills_by_category %}
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('skillsChart');
+        if (!ctx) return;
+
+        const skillsData = {
+            {% for category, skills in skills_by_category.items() %}
+            '{{ category }}': [{% for skill in skills %}{ name: '{{ skill.name }}', proficiency: {{ skill.proficiency }} },{% endfor %}],
+            {% endfor %}
+        };
+
+        const categories = Object.keys(skillsData);
+        const avgProficiencies = categories.map(cat => {
+            const skills = skillsData[cat];
+            return Math.round(skills.reduce((sum, s) => sum + s.proficiency, 0) / skills.length);
+        });
+
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: categories,
+                datasets: [{
+                    label: 'Average Proficiency',
+                    data: avgProficiencies,
+                    borderColor: 'var(--bs-info)',
+                    backgroundColor: 'rgba(13, 202, 240, 0.2)',
+                    borderWidth: 2,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    r: { beginAtZero: true, max: 100, ticks: { stepSize: 20 } }
+                },
+                plugins: {
+                    legend: { display: false },
+                    title: { display: true, text: 'Skills Overview' }
+                }
+            }
+        });
+    });
+    </script>
+    {% endif %}
+
+</body>
+</html>

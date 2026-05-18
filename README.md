@@ -1,45 +1,49 @@
-# Interactive Resume Website
+# Resume — GitHub Pages Site
 
-A modern, responsive resume website built with Flask and PostgreSQL, featuring a comprehensive admin panel for content management.
-
-## Features
-
-- **Interactive Resume Display**: Professional resume layout with timeline animations
-- **Admin Panel**: Full CRUD operations for managing resume content
-- **Database Management**: PostgreSQL integration for data persistence
-- **Responsive Design**: Mobile-friendly Bootstrap dark theme
-- **Contact Form**: Functional contact form with database storage
-- **Print-Optimized**: Print-friendly CSS for PDF generation
+A static personal resume website hosted on GitHub Pages. All content lives in a single `resume.json` file. Edit the file, run the build script, push — done.
 
 ## Tech Stack
 
-- **Backend**: Flask, SQLAlchemy, Flask-WTF
-- **Database**: PostgreSQL
-- **Frontend**: Bootstrap 5, Custom CSS, Vanilla JavaScript
+- **Build**: Python + Jinja2 (one-time script, no server)
+- **Frontend**: Bootstrap 5, Font Awesome, Chart.js, Vanilla JavaScript
+- **Hosting**: GitHub Pages
 
-## Local Development
+## Updating Your Resume
 
-1. Clone the repository
-2. Set environment variables:
-   - `DATABASE_URL`: PostgreSQL connection string
-   - `SESSION_SECRET`: Flask session secret key
-3. Run the application: `python main.py`
+1. Edit `resume.json` with your real info (personal, experience, education, skills, projects)
+2. Run the build script:
+   ```bash
+   python build.py
+   ```
+3. Commit and push `index.html` (and `static/` if changed):
+   ```bash
+   git add index.html static/
+   git commit -m "Update resume"
+   git push
+   ```
 
-## Admin Access
+## Local Preview
 
-Visit `/admin` to access the content management system where you can:
-- Update personal information
-- Manage work experience
-- Add/edit education entries
-- Configure skills and proficiency levels
-- Showcase projects
-- View contact form submissions
+Open `index.html` directly in your browser — no server needed.
 
-## Database Schema
+## Contact Form
 
-- **Personal Info**: Contact details and professional summary
-- **Experience**: Work history with timeline features
-- **Education**: Academic background
-- **Skill**: Technical and soft skills with categories
-- **Project**: Portfolio projects
-- **Contact Message**: Contact form submissions
+The contact form uses [Formspree](https://formspree.io) (free):
+
+1. Sign up at formspree.io
+2. Create a new form
+3. Replace `YOUR_FORMSPREE_ENDPOINT` in `templates/index.html` with your form URL
+4. Rebuild: `python build.py`
+
+## GitHub Pages Setup
+
+1. Create a repo named `<your-github-username>.github.io`
+2. Push `index.html` and `static/` to it
+3. Go to repo **Settings → Pages → Source**: branch `main`, folder `/root`
+4. Your site goes live at `https://<your-github-username>.github.io`
+
+## Dependencies
+
+```bash
+pip install jinja2
+```

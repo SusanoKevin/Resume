@@ -1,0 +1,90 @@
+{
+  "personal": {
+    "name": "Your Name",
+    "title": "Your Professional Title",
+    "email": "you@example.com",
+    "phone": "(555) 123-4567",
+    "location": "City, State",
+    "summary": "A results-driven professional with experience in building scalable software solutions. Passionate about clean code, collaboration, and continuous learning.",
+    "linkedin_url": "https://linkedin.com/in/yourprofile",
+    "github_url": "https://github.com/yourusername",
+    "website_url": ""
+  },
+  "experience": [
+    {
+      "position": "Senior Software Engineer",
+      "company": "Tech Company Inc.",
+      "location": "San Francisco, CA",
+      "start_date": "2022-01",
+      "end_date": null,
+      "current": true,
+      "description": "Lead development of core platform services serving millions of users. Collaborate with cross-functional teams to deliver high-quality features on time.",
+      "achievements": [
+        "Reduced API response time by 40% through query optimization and caching",
+        "Led a team of 4 engineers to deliver a critical migration ahead of schedule",
+        "Introduced automated testing practices that increased code coverage from 45% to 85%"
+      ]
+    },
+    {
+      "position": "Software Engineer",
+      "company": "Startup Co.",
+      "location": "Remote",
+      "start_date": "2019-06",
+      "end_date": "2021-12",
+      "current": false,
+      "description": "Built and maintained full-stack web applications using Python and React. Worked closely with product and design to ship user-facing features.",
+      "achievements": [
+        "Shipped 3 major product features used by 50,000+ active users",
+        "Implemented CI/CD pipeline that cut deployment time from 2 hours to 15 minutes",
+        "Mentored 2 junior engineers through onboarding and code reviews"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "State University",
+      "degree": "Bachelor of Science",
+      "field_of_study": "Computer Science",
+      "start_date": "2015-09",
+      "end_date": "2019-05",
+      "gpa": "3.8",
+      "description": "Relevant coursework: Algorithms, Data Structures, Operating Systems, Distributed Systems."
+    }
+  ],
+  "skills": [
+    { "name": "Python", "category": "Programming", "proficiency": 92 },
+    { "name": "JavaScript", "category": "Programming", "proficiency": 85 },
+    { "name": "TypeScript", "category": "Programming", "proficiency": 78 },
+    { "name": "SQL", "category": "Programming", "proficiency": 80 },
+    { "name": "React", "category": "Frontend", "proficiency": 82 },
+    { "name": "HTML / CSS", "category": "Frontend", "proficiency": 88 },
+    { "name": "Flask", "category": "Backend", "proficiency": 90 },
+    { "name": "Node.js", "category": "Backend", "proficiency": 72 },
+    { "name": "PostgreSQL", "category": "Backend", "proficiency": 80 },
+    { "name": "Docker", "category": "DevOps", "proficiency": 75 },
+    { "name": "Git", "category": "DevOps", "proficiency": 90 },
+    { "name": "CI/CD", "category": "DevOps", "proficiency": 70 }
+  ],
+  "projects": [
+    {
+      "name": "Portfolio Resume Site",
+      "description": "A static resume website built with Python and Jinja2, hosted on GitHub Pages. Designed to be easily updated via a single JSON data file.",
+      "technologies": ["Python", "Jinja2", "Bootstrap 5", "JavaScript"],
+      "github_url": "https://github.com/yourusername/yourusername.github.io",
+      "live_url": "https://yourusername.github.io",
+      "start_date": "2024-01",
+      "end_date": null,
+      "featured": true
+    },
+    {
+      "name": "Open Source CLI Tool",
+      "description": "A command-line utility for automating repetitive development tasks. Published to PyPI with 500+ downloads.",
+      "technologies": ["Python", "Click", "Rich"],
+      "github_url": "https://github.com/yourusername/cli-tool",
+      "live_url": "",
+      "start_date": "2023-03",
+      "end_date": "2023-09",
+      "featured": true
+    }
+  ]
+}
