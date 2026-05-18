@@ -12,7 +12,7 @@ from docx.oxml import OxmlElement
 
 BLACK  = RGBColor(0, 0, 0)
 FONT   = "Times New Roman"
-BODY   = 10.5
+BODY   = 11
 NAME_S = 16
 TITLE_S = 11
 CONT_S = 10
@@ -81,7 +81,7 @@ def add_border(p, side="bottom", sz="8", color="000000", val="single", space="2"
     pPr.append(pBdr)
 
 
-def section_head(doc, title, sb=5):
+def section_head(doc, title, sb=10):
     p = para(doc, sb=sb, sa=1)
     add_border(p, sz="4", space="1")
     run(p, title, bold=True, size=HEAD_S)
@@ -102,7 +102,7 @@ def right_tab_para(doc, left, right, lb=True, rb=False, sb=0, sa=0,
 
 
 def bullet(doc, text):
-    p = para(doc)
+    p = para(doc, sa=2)
     p.paragraph_format.left_indent       = Inches(0.2)
     p.paragraph_format.first_line_indent = Inches(-0.15)
     run(p, "•  " + text, size=BODY)
@@ -113,10 +113,10 @@ def bullet(doc, text):
 doc = setup_doc()
 
 # ── HEADER ───────────────────────────────────────────────────────
-p = para(doc, sa=1)
+p = para(doc, sa=2)
 run(p, data["personal"]["name"], bold=True, size=NAME_S)
 
-p = para(doc, sa=1)
+p = para(doc, sa=2)
 run(p, "Data Analyst  &  AI Engineer", italic=True, size=TITLE_S)
 
 # Contact line with thick bottom rule
@@ -127,8 +127,8 @@ contact = (f"{data['personal']['phone']}  |  {data['personal']['email']}  |  "
 run(p, contact, size=CONT_S)
 
 # ── PROFESSIONAL SUMMARY ─────────────────────────────────────────
-section_head(doc, "PROFESSIONAL SUMMARY", sb=5)
-p = para(doc, sa=2)
+section_head(doc, "PROFESSIONAL SUMMARY", sb=8)
+p = para(doc, sa=6)
 summary = (
     "M.S. graduate in Information Technology Management (Data Analytics & AI) from "
     "UW–Milwaukee, currently heading all Agentic AI development for the Excelsis360 "
@@ -177,7 +177,7 @@ for i, exp in enumerate(exp_content):
     end      = "Present" if exp["current"] else fmt_date(exp["end"])
     date_str = f"{fmt_date(exp['start'])} – {end}"
     label    = f"{exp['role']}  |  {exp['company']}, {exp['location']}"
-    sb = 3 if i > 0 else 0
+    sb = 7 if i > 0 else 0
     right_tab_para(doc, label, date_str, lb=True, sb=sb, sa=0)
     for b in exp["bullets"]:
         bullet(doc, b)
@@ -193,7 +193,7 @@ edu_entries = [
 ]
 
 for i, (degree, institution, date) in enumerate(edu_entries):
-    sb = 2 if i > 0 else 0
+    sb = 6 if i > 0 else 0
     right_tab_para(doc, degree, date, lb=True, sb=sb)
     p = para(doc)
     run(p, institution, italic=True)
@@ -232,7 +232,7 @@ projects = [
 ]
 
 for i, proj in enumerate(projects):
-    sb = 2 if i > 0 else 0
+    sb = 6 if i > 0 else 0
     p = para(doc, sb=sb)
     run(p, proj["name"] + "  ", bold=True)
     run(p, f"({proj['tech']})", italic=True, size=9.5)
