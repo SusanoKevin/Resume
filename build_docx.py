@@ -177,9 +177,10 @@ section_head(doc, "SKILLS")
 
 skill_lines = [
     ("Programming Languages", "Python, SQL, JavaScript, HTML, CSS"),
-    ("Machine Learning",      "Random Forest, scikit-learn, SMOTE, GridSearchCV, Pandas, NumPy"),
-    ("Data Analysis & Visualization", "Matplotlib, Seaborn, Streamlit, Power BI"),
-    ("Cloud & Data Platforms", "Snowflake, Excel, Microsoft Access"),
+    ("Agentic AI",            "LangChain, LangGraph, MCP, Ollama"),
+    ("Machine Learning",      "scikit-learn, Random Forest, SMOTE, GridSearchCV, Pandas, NumPy"),
+    ("APIs & Data Tools",     "FastAPI, Streamlit, Matplotlib, Seaborn, Power BI"),
+    ("Cloud & Platforms",     "Snowflake, SQL Server, Excel, Microsoft Access"),
 ]
 for category, items in skill_lines:
     p = para(doc, sa=1)
@@ -201,7 +202,7 @@ projects = [
     },
     {
         "name":   "Excelsis Attendance Agent",
-        "tech":   "Python, Agentic AI",
+        "tech":   "Python, LangChain, LangGraph, FastAPI, MCP, Ollama",
         "github": "github.com/SusanoKevin/Excelsis-Attendance-Agent",
         "bullets": [
             "Building an AI agent to automate end-to-end attendance tracking for the Excelsis360 platform, designing multi-step agentic pipelines to handle workflows autonomously",
