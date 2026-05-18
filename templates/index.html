@@ -31,6 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -202,6 +203,35 @@
                 {% endif %}
             </div>
         </section>
+
+        <!-- Certifications Section -->
+        {% if certifications %}
+        <section id="certifications" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">
+                    <i class="fas fa-certificate me-3"></i>Certifications
+                </h2>
+                <div class="row justify-content-center">
+                    {% for cert in certifications %}
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-award fa-2x text-info mb-3"></i>
+                                <h5 class="card-title">{{ cert.name }}</h5>
+                                <h6 class="text-info mb-2">{{ cert.issuer }}</h6>
+                                {% if cert.date_fmt %}
+                                <p class="text-muted mb-0">
+                                    <i class="fas fa-calendar me-2"></i>{{ cert.date_fmt }}
+                                </p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
 
         <!-- Skills Section -->
         <section id="skills" class="py-5">

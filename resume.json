@@ -1,90 +1,128 @@
 {
   "personal": {
-    "name": "Your Name",
-    "title": "Your Professional Title",
-    "email": "you@example.com",
-    "phone": "(555) 123-4567",
-    "location": "City, State",
-    "summary": "A results-driven professional with experience in building scalable software solutions. Passionate about clean code, collaboration, and continuous learning.",
-    "linkedin_url": "https://linkedin.com/in/yourprofile",
-    "github_url": "https://github.com/yourusername",
+    "name": "Susano Kevin Amala Mahil Maran",
+    "title": "Data Analyst & AI Engineer",
+    "email": "susanokevin40@gmail.com",
+    "phone": "414-422-5592",
+    "location": "Milwaukee, WI",
+    "summary": "Analytical and detail-oriented professional with a Master's degree in Information Technology Management with a focus on Data Analytics and Artificial Intelligence. Experienced in building predictive models, transforming unstructured data, and delivering data-driven solutions using Python and Snowflake.",
+    "linkedin_url": "https://linkedin.com/in/susano-kevin/",
+    "github_url": "https://github.com/SusanoKevin",
     "website_url": ""
   },
   "experience": [
     {
-      "position": "Senior Software Engineer",
-      "company": "Tech Company Inc.",
-      "location": "San Francisco, CA",
-      "start_date": "2022-01",
+      "position": "Software Engineer",
+      "company": "Excellerate Education Solutions",
+      "location": "IL",
+      "start_date": "2026-01",
       "end_date": null,
       "current": true,
-      "description": "Lead development of core platform services serving millions of users. Collaborate with cross-functional teams to deliver high-quality features on time.",
+      "description": "Contributing to the design and development of the Excelsis360 application.",
       "achievements": [
-        "Reduced API response time by 40% through query optimization and caching",
-        "Led a team of 4 engineers to deliver a critical migration ahead of schedule",
-        "Introduced automated testing practices that increased code coverage from 45% to 85%"
+        "Studying design and build of the Excelsis360 platform to contribute to feature development"
       ]
     },
     {
-      "position": "Software Engineer",
-      "company": "Startup Co.",
-      "location": "Remote",
-      "start_date": "2019-06",
-      "end_date": "2021-12",
+      "position": "Help Desk Technician",
+      "company": "Carroll University",
+      "location": "Waukesha, WI",
+      "start_date": "2023-09",
+      "end_date": "2024-05",
       "current": false,
-      "description": "Built and maintained full-stack web applications using Python and React. Worked closely with product and design to ship user-facing features.",
+      "description": "Provided technical support and training to end users across campus systems.",
       "achievements": [
-        "Shipped 3 major product features used by 50,000+ active users",
-        "Implemented CI/CD pipeline that cut deployment time from 2 hours to 15 minutes",
-        "Mentored 2 junior engineers through onboarding and code reviews"
+        "Provided first-level technical support and conducted end-user training sessions for software applications",
+        "Managed help desk tickets to resolve hardware and software issues for clients",
+        "Set up new workstation configurations, maintained accurate records, and assisted in system upgrades"
+      ]
+    },
+    {
+      "position": "Help Desk Technician",
+      "company": "Cardinal Stritch University",
+      "location": "Milwaukee, WI",
+      "start_date": "2021-05",
+      "end_date": "2023-05",
+      "current": false,
+      "description": "Delivered technical support and supervised student workers in a fast-paced help desk environment.",
+      "achievements": [
+        "Trained new student workers in essential job functions and supervised task completion in the Track-IT system",
+        "Ensured work was completed professionally and within set deadlines",
+        "Assisted clients in resolving system and technology issues through clear guidance and support"
       ]
     }
   ],
   "education": [
     {
-      "institution": "State University",
-      "degree": "Bachelor of Science",
-      "field_of_study": "Computer Science",
-      "start_date": "2015-09",
-      "end_date": "2019-05",
-      "gpa": "3.8",
-      "description": "Relevant coursework: Algorithms, Data Structures, Operating Systems, Distributed Systems."
+      "institution": "University of Wisconsin – Milwaukee",
+      "degree": "Master of Science",
+      "field_of_study": "Information Technology Management — Data Analytics & AI",
+      "start_date": "2024-08",
+      "end_date": "2025-12",
+      "gpa": "",
+      "description": ""
+    },
+    {
+      "institution": "Carroll University",
+      "degree": "Bachelor of Business Administration",
+      "field_of_study": "Communication Minor",
+      "start_date": "2020-08",
+      "end_date": "2024-05",
+      "gpa": "",
+      "description": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Snowflake Platform Training",
+      "issuer": "Snowflake",
+      "date": "2025-06"
     }
   ],
   "skills": [
-    { "name": "Python", "category": "Programming", "proficiency": 92 },
-    { "name": "JavaScript", "category": "Programming", "proficiency": 85 },
-    { "name": "TypeScript", "category": "Programming", "proficiency": 78 },
-    { "name": "SQL", "category": "Programming", "proficiency": 80 },
-    { "name": "React", "category": "Frontend", "proficiency": 82 },
-    { "name": "HTML / CSS", "category": "Frontend", "proficiency": 88 },
-    { "name": "Flask", "category": "Backend", "proficiency": 90 },
-    { "name": "Node.js", "category": "Backend", "proficiency": 72 },
-    { "name": "PostgreSQL", "category": "Backend", "proficiency": 80 },
-    { "name": "Docker", "category": "DevOps", "proficiency": 75 },
-    { "name": "Git", "category": "DevOps", "proficiency": 90 },
-    { "name": "CI/CD", "category": "DevOps", "proficiency": 70 }
+    { "name": "Python", "category": "Programming", "proficiency": 85 },
+    { "name": "SQL", "category": "Programming", "proficiency": 82 },
+    { "name": "JavaScript", "category": "Programming", "proficiency": 65 },
+    { "name": "HTML / CSS", "category": "Programming", "proficiency": 70 },
+    { "name": "Pandas", "category": "Data & ML", "proficiency": 83 },
+    { "name": "NumPy", "category": "Data & ML", "proficiency": 80 },
+    { "name": "scikit-learn", "category": "Data & ML", "proficiency": 82 },
+    { "name": "Matplotlib / Seaborn", "category": "Data & ML", "proficiency": 78 },
+    { "name": "Streamlit", "category": "Data & ML", "proficiency": 75 },
+    { "name": "Snowflake", "category": "Cloud & BI", "proficiency": 78 },
+    { "name": "Power BI", "category": "Cloud & BI", "proficiency": 72 },
+    { "name": "Excel / Access", "category": "Cloud & BI", "proficiency": 80 }
   ],
   "projects": [
     {
-      "name": "Portfolio Resume Site",
-      "description": "A static resume website built with Python and Jinja2, hosted on GitHub Pages. Designed to be easily updated via a single JSON data file.",
-      "technologies": ["Python", "Jinja2", "Bootstrap 5", "JavaScript"],
-      "github_url": "https://github.com/yourusername/yourusername.github.io",
-      "live_url": "https://yourusername.github.io",
-      "start_date": "2024-01",
+      "name": "Churn Predictor Bot",
+      "description": "ML-powered customer churn prediction app using Random Forest with GridSearchCV and SMOTE, achieving over 80% accuracy. Features an interactive Streamlit UI for real-time prediction and visualization.",
+      "technologies": ["Python", "scikit-learn", "Streamlit", "SMOTE", "Pandas"],
+      "github_url": "https://github.com/SusanoKevin/Churn-Predictor",
+      "live_url": "",
+      "start_date": "2024-09",
       "end_date": null,
       "featured": true
     },
     {
-      "name": "Open Source CLI Tool",
-      "description": "A command-line utility for automating repetitive development tasks. Published to PyPI with 500+ downloads.",
-      "technologies": ["Python", "Click", "Rich"],
-      "github_url": "https://github.com/yourusername/cli-tool",
+      "name": "Excelsis Attendance Agent",
+      "description": "AI-powered attendance automation agent built for the Excelsis360 education platform.",
+      "technologies": ["Python"],
+      "github_url": "https://github.com/SusanoKevin/Excelsis-Attendance-Agent",
       "live_url": "",
-      "start_date": "2023-03",
-      "end_date": "2023-09",
+      "start_date": "2026-01",
+      "end_date": null,
       "featured": true
+    },
+    {
+      "name": "LangrisserBot",
+      "description": "Automated Python bot project.",
+      "technologies": ["Python"],
+      "github_url": "https://github.com/SusanoKevin/LangrisserBot",
+      "live_url": "",
+      "start_date": null,
+      "end_date": null,
+      "featured": false
     }
   ]
 }

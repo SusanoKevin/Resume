@@ -52,6 +52,9 @@ def main():
         proj["start_date_fmt"] = fmt_month_year(proj.get("start_date"))
         proj["end_date_fmt"] = fmt_month_year(proj.get("end_date"))
 
+    for cert in data.get("certifications", []):
+        cert["date_fmt"] = fmt_month_year(cert.get("date"))
+
     # Group skills by category (preserve insertion order)
     skills_by_category = defaultdict(list)
     for skill in data.get("skills", []):
@@ -64,6 +67,7 @@ def main():
         personal=data.get("personal"),
         experience=data.get("experience", []),
         education=data.get("education", []),
+        certifications=data.get("certifications", []),
         skills_by_category=dict(skills_by_category),
         projects=data.get("projects", []),
     )
