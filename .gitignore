@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 *.docx
+node_modules/
+dist/

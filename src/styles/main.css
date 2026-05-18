@@ -1,0 +1,12 @@
+@import './_variables.css';
+@import './_reset.css';
+@import './_layout.css';
+@import './_nav.css';
+@import './_hero.css';
+@import './_timeline.css';
+@import './_cards.css';
+@import './_skills.css';
+@import './_badges.css';
+@import './_contact.css';
+@import './_animations.css';
+@import './_print.css';

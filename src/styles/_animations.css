@@ -1,0 +1,35 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger for grid children */
+.edu-grid .card.reveal:nth-child(2),
+.cert-grid .card.reveal:nth-child(2),
+.projects-grid .card.reveal:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+.edu-grid .card.reveal:nth-child(3),
+.cert-grid .card.reveal:nth-child(3),
+.projects-grid .card.reveal:nth-child(3) {
+  transition-delay: 0.16s;
+}
+
+/* Typed cursor used by TypedText component */
+.typed-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.85em;
+  background: var(--color-accent);
+  vertical-align: middle;
+  border-radius: 1px;
+  margin-left: 1px;
+  animation: blink 0.7s step-end infinite;
+}

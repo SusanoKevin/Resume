@@ -1,0 +1,56 @@
+:root {
+  /* Accent */
+  --color-accent:        #22d3ee;
+  --color-accent-dim:    rgba(34, 211, 238, 0.12);
+  --color-accent-border: rgba(34, 211, 238, 0.30);
+
+  /* Success (achievement bullets) */
+  --color-success: #4ade80;
+
+  /* Surfaces — dark mode defaults */
+  --bg-page:      #0f1117;
+  --bg-surface:   #1a1d27;
+  --bg-surface-2: #22263a;
+  --bg-nav:       #111318;
+
+  /* Text */
+  --text-primary:   #f0f2f8;
+  --text-secondary: #8b93b0;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Skill bar track */
+  --skill-track: rgba(255, 255, 255, 0.08);
+
+  /* Layout */
+  --container-width: 960px;
+  --section-py:      5rem;
+  --nav-height:      64px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+}
+
+:root[data-theme="light"] {
+  --color-accent:        #0891b2;
+  --color-accent-dim:    rgba(8, 145, 178, 0.10);
+  --color-accent-border: rgba(8, 145, 178, 0.28);
+
+  --bg-page:      #f4f6fb;
+  --bg-surface:   #ffffff;
+  --bg-surface-2: #eef0f7;
+  --bg-nav:       #ffffff;
+
+  --text-primary:   #1a1d27;
+  --text-secondary: #555c7a;
+
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --skill-track:   rgba(0, 0, 0, 0.08);
+}

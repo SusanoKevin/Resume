@@ -1,0 +1,41 @@
+@media print {
+  nav,
+  #contact,
+  .theme-toggle,
+  .skill-tabs,
+  .hero-social {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  body, * {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    border-color: #ddd !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .skill-bar-fill {
+    background: #555 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .hero-section {
+    min-height: unset;
+    page-break-after: avoid;
+  }
+
+  .timeline-item,
+  .card {
+    page-break-inside: avoid;
+  }
+}
