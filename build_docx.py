@@ -15,7 +15,7 @@ FONT   = "Times New Roman"
 BODY   = 11     # pt — body / bullets
 HEAD   = 11     # pt — section headers
 NAME_S = 14     # pt — name
-CONT_S = 9.5    # pt — contact line
+CONT_S = 10     # pt — contact line
 USABLE_W_TWIPS = int(Inches(7.5).pt * 20)
 
 with open("/Users/susanokevinamalamahilmaran/Downloads/Projects/Resume/resume.json") as f:
@@ -69,7 +69,7 @@ def para(doc, align=WD_ALIGN_PARAGRAPH.LEFT, sb=0, sa=0):
     return p
 
 
-def section_head(doc, title, sb=6):
+def section_head(doc, title, sb=5):
     p = para(doc, sb=sb, sa=1)
     pPr = p._p.get_or_add_pPr()
     pBdr = OxmlElement("w:pBdr")
@@ -96,7 +96,7 @@ def right_tab_para(doc, left, right, lb=True, rb=False, sb=0, sa=0):
     run(p, "\t" + right, bold=rb, size=BODY)
 
 
-def bullet(doc, text, sa=1):
+def bullet(doc, text, sa=0):
     p = para(doc, sa=sa)
     p.paragraph_format.left_indent       = Inches(0.22)
     p.paragraph_format.first_line_indent = Inches(-0.16)
