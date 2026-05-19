@@ -19,8 +19,8 @@
       "current": true,
       "description": "Leading Agentic AI initiatives for Excelsis360, architecting autonomous agent systems that automate complex, multi-step educational workflows end-to-end.",
       "achievements": [
-        "Designing and developing the Excelsis Attendance Agent \u2014 an AI agent to fully automate attendance tracking and eliminate manual data entry across the platform.",
-        "Defining the Agentic AI roadmap by identifying high-value automation targets, designing agent pipelines, and delivering working solutions into the live product."
+        "Architected and built the Excelsis Data Agent \u2014 a full-stack AI analyst with a LangGraph ReAct agent (13 tools), ChromaDB RAG layer (Ollama embeddings) for grounded schema and policy answers, SSE-streaming FastAPI backend, and a React + Tailwind frontend deployed on the Excelsis360 platform.",
+        "Designed a configurable, domain-agnostic data pipeline connecting SQL Server to a local LLM via natural-language queries, a rate-limited REST API, and an MCP server for Claude Code integration."
       ]
     },
     {
@@ -204,12 +204,21 @@
       "featured": true
     },
     {
-      "name": "Excelsis Attendance Agent",
-      "description": "AI-powered attendance automation agent built for the Excelsis360 education platform.",
+      "name": "Excelsis Data Agent",
+      "description": "Full-stack AI data analyst for the Excelsis360 platform. LangGraph ReAct agent (13 tools) with a ChromaDB RAG layer (Ollama embeddings) for grounded schema and policy answers. SSE-streaming FastAPI backend with JWT auth and rate limiting; React + Tailwind frontend; configurable SQL Server data backend that adapts to any tabular schema.",
       "technologies": [
-        "Python"
+        "Python",
+        "LangGraph",
+        "LangChain",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "SQL Server",
+        "ChromaDB",
+        "Ollama",
+        "Tailwind CSS"
       ],
-      "github_url": "https://github.com/SusanoKevin/Excelsis-Attendance-Agent",
+      "github_url": "https://github.com/SusanoKevin/Excelsis-Data-Analyst-Agent",
       "live_url": "",
       "start_date": "2026-01",
       "end_date": null,
