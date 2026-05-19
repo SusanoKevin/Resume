@@ -122,7 +122,7 @@ run(p, "Data Analyst  &  AI Engineer", italic=True, size=TITLE_S)
 # Contact line with thick bottom rule
 p = para(doc, sa=0)
 add_border(p, sz="12", space="3")
-contact = (f"{data['personal']['phone']}  |  {data['personal']['email']}  |  "
+contact = (f"{data['personal']['email']}  |  "
            f"linkedin.com/in/susano-kevin  |  github.com/SusanoKevin  |  Milwaukee, WI")
 run(p, contact, size=CONT_S)
 
@@ -148,8 +148,8 @@ exp_content = [
         "start": "2026-01", "end": None, "current": True,
         "bullets": [
             "Head all Agentic AI initiatives for Excelsis360, architecting autonomous agent systems that automate complex, multi-step educational workflows end-to-end",
-            "Designing and developing the Excelsis Data Agent — an AI-powered data analyst for the Excelsis360 platform, enabling natural-language querying across attendance, enrollment, HR, and academic data",
-            "Define the Agentic AI roadmap by identifying high-value automation targets, designing agent pipelines, and delivering working solutions into the live product",
+            "Architected and built the Excelsis Data Agent — a full-stack AI analyst with a LangGraph ReAct agent (13 tools), ChromaDB RAG layer (Ollama embeddings) for grounded schema and policy answers, SSE-streaming FastAPI backend, and a React + Tailwind frontend deployed on the Excelsis360 platform",
+            "Designed a configurable, domain-agnostic data pipeline connecting SQL Server to a local LLM via natural-language queries, a rate-limited REST API, and an MCP server for Claude Code integration",
         ],
     },
     {
@@ -203,7 +203,7 @@ section_head(doc, "SKILLS")
 
 skill_lines = [
     ("Programming Languages", "Python, TypeScript, JavaScript, SQL, HTML, CSS"),
-    ("Agentic AI",            "LangChain, LangGraph, MCP, Ollama"),
+    ("Agentic AI",            "LangChain, LangGraph, ChromaDB, MCP, Ollama"),
     ("Frontend & APIs",       "React, Tailwind CSS, FastAPI, Streamlit"),
     ("Machine Learning",      "scikit-learn, Random Forest, SMOTE, GridSearchCV, Pandas, NumPy"),
     ("Cloud & BI",            "Snowflake, SQL Server, Power BI, Excel, Microsoft Access"),
@@ -225,9 +225,9 @@ projects = [
     },
     {
         "name":   "Excelsis Data Agent",
-        "tech":   "Python, LangChain, LangGraph, FastAPI, React, TypeScript, MCP, Ollama",
-        "github": "github.com/SusanoKevin/Excelsis-Data-Agent",
-        "bullet": "Building an AI data analyst agent for the Excelsis360 platform using multi-step agentic pipelines to enable natural-language querying across multiple data domains.",
+        "tech":   "Python, LangChain, LangGraph, FastAPI, React, TypeScript, SQL Server, ChromaDB, Ollama, MCP",
+        "github": "github.com/SusanoKevin/Excelsis-Data-Analyst-Agent",
+        "bullet": "Full-stack AI data analyst for Excelsis360: LangGraph ReAct agent (13 tools), ChromaDB RAG layer for grounded answers, SSE-streaming FastAPI backend, React + Tailwind frontend, configurable SQL Server data backend.",
     },
 ]
 
