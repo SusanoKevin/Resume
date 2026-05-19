@@ -148,7 +148,7 @@ exp_content = [
         "start": "2026-01", "end": None, "current": True,
         "bullets": [
             "Head all Agentic AI initiatives for Excelsis360, architecting autonomous agent systems that automate complex, multi-step educational workflows end-to-end",
-            "Designing and developing the Excelsis Attendance Agent — an AI agent to fully automate attendance tracking and eliminate manual data entry across the platform",
+            "Designing and developing the Excelsis Data Agent — an AI-powered data analyst for the Excelsis360 platform, enabling natural-language querying across attendance, enrollment, HR, and academic data",
             "Define the Agentic AI roadmap by identifying high-value automation targets, designing agent pipelines, and delivering working solutions into the live product",
         ],
     },
@@ -224,10 +224,10 @@ projects = [
         "bullet": "Random Forest classifier with GridSearchCV and SMOTE achieving 80%+ accuracy; deployed as an interactive Streamlit app for real-time churn prediction and visualization.",
     },
     {
-        "name":   "Excelsis Attendance Agent",
+        "name":   "Excelsis Data Agent",
         "tech":   "Python, LangChain, LangGraph, FastAPI, React, TypeScript, MCP, Ollama",
-        "github": "github.com/SusanoKevin/Excelsis-Attendance-Agent",
-        "bullet": "Building an AI agent to automate end-to-end attendance tracking for the Excelsis360 platform using multi-step agentic pipelines.",
+        "github": "github.com/SusanoKevin/Excelsis-Data-Agent",
+        "bullet": "Building an AI data analyst agent for the Excelsis360 platform using multi-step agentic pipelines to enable natural-language querying across multiple data domains.",
     },
 ]
 

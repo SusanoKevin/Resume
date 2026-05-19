@@ -204,12 +204,12 @@
       "featured": true
     },
     {
-      "name": "Excelsis Attendance Agent",
-      "description": "AI-powered attendance automation agent built for the Excelsis360 education platform.",
+      "name": "Excelsis Data Agent",
+      "description": "AI-powered data analyst agent built for the Excelsis360 education platform, supporting natural-language querying across multiple data domains.",
       "technologies": [
         "Python"
       ],
-      "github_url": "https://github.com/SusanoKevin/Excelsis-Attendance-Agent",
+      "github_url": "https://github.com/SusanoKevin/Excelsis-Data-Agent",
       "live_url": "",
       "start_date": "2026-01",
       "end_date": null,

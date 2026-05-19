@@ -140,7 +140,7 @@ directive:      "Turn raw data into decisive intelligence."
 Leading the design and implementation of **Agentic AI solutions** for the **Excelsis360** education platform — the primary driver of the platform's intelligent automation capabilities.
 
 - Heading all Agentic AI initiatives for Excelsis360, architecting autonomous agent systems that handle complex, multi-step educational workflows end-to-end
-- Designing and developing the **Excelsis Attendance Agent** — an AI agent to fully automate attendance tracking and eliminate manual data entry across the platform
+- Designing and developing the **Excelsis Data Agent** — an AI-powered data analyst for the Excelsis360 platform, enabling natural-language querying across attendance, enrollment, HR, and academic data
 - Defining the Agentic AI roadmap: identifying high-value automation targets, designing agent pipelines, and delivering working solutions into the live product
 
 </details>
@@ -219,12 +219,12 @@ Two-year stint in a high-volume campus IT environment — grew from support tech
 ![A-Rank](https://img.shields.io/badge/▲_A--RANK-ff8c00?style=for-the-badge)
 
 </td>
-<td align="left"><b>Excelsis Attendance Agent</b></td>
-<td align="left">AI attendance automation agent in active development for the <b>Excelsis360</b> education platform. Designing multi-step agentic pipelines using LangChain and LangGraph to autonomously handle end-to-end attendance workflows.</td>
+<td align="left"><b>Excelsis Data Agent</b></td>
+<td align="left">AI-powered data analyst agent in active development for the <b>Excelsis360</b> education platform. Building multi-step agentic pipelines using LangChain and LangGraph to enable natural-language querying across attendance, enrollment, HR, and academic data.</td>
 <td align="left"><code>Python</code> <code>LangChain</code> <code>LangGraph</code> <code>FastAPI</code> <code>React</code> <code>TypeScript</code> <code>MCP</code> <code>Ollama</code></td>
 <td align="center">
 
-[![View](https://img.shields.io/badge/DEPLOY_%E2%86%92-00d4ff?style=flat-square)](https://github.com/SusanoKevin/Excelsis-Attendance-Agent)
+[![View](https://img.shields.io/badge/DEPLOY_%E2%86%92-00d4ff?style=flat-square)](https://github.com/SusanoKevin/Excelsis-Data-Agent)
 
 </td>
 </tr>
