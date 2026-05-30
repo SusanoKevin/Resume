@@ -1,62 +1,86 @@
 {
   "personal": {
     "name": "Susano Kevin Amala Mahil Maran",
-    "title": "Data Analyst & AI Engineer",
-    "email": "susanokevin40@gmail.com",
-    "location": "Milwaukee, WI",
-    "summary": "Analytical and detail-oriented professional with a Master's degree in Information Technology Management with a focus on Data Analytics and Artificial Intelligence. Experienced in building predictive models, transforming unstructured data, and delivering data-driven solutions using Python and Snowflake.",
+    "title": "AI Engineer",
+    "email": "susanokevinamalamahilmaran@gmail.com",
+    "location": "Menomonee Falls, WI",
+    "summary": "AI Engineer with production experience building multi-agent systems, RAG pipelines, and MLOps workflows. Architected LangGraph-based autonomous agent systems for education automation, implemented hybrid retrieval at scale using Milvus and Pinecone, and deployed model-serving APIs on Amazon EKS. Proficient across the full AI/ML stack — from document ingestion and embedding pipelines to model evaluation, CI/CD, and observability.",
     "linkedin_url": "https://linkedin.com/in/susano-kevin/",
     "github_url": "https://github.com/SusanoKevin",
     "website_url": ""
   },
   "experience": [
     {
-      "position": "Software Engineer Intern (Agentic AI)",
+      "position": "AI Engineer",
       "company": "Excellerate Education Solutions",
-      "location": "IL",
+      "location": "Illinois",
       "start_date": "2026-01",
       "end_date": null,
       "current": true,
-      "description": "Leading Agentic AI initiatives for Excelsis360, architecting autonomous agent systems that automate complex, multi-step educational workflows end-to-end.",
+      "description": "Architected and deployed production-grade multi-agent AI systems for admissions guidance and career recommendations using LangGraph supervisor–worker orchestration.",
       "achievements": [
-        "Designing and developing the Excelsis Attendance Agent \u2014 an AI agent to fully automate attendance tracking and eliminate manual data entry across the platform.",
-        "Defining the Agentic AI roadmap by identifying high-value automation targets, designing agent pipelines, and delivering working solutions into the live product."
+        "Architected and deployed a production-grade multi-agent AI assistant using LangGraph and LangChain to automate admissions guidance and career recommendations through coordinated planning, retrieval, evaluation, and response-generation agents.",
+        "Designed specialized agents for document analysis, eligibility verification, scholarship discovery, and personalized career planning using supervisor–worker orchestration patterns with dynamic routing.",
+        "Built end-to-end document ingestion pipelines using Unstructured.io for parsing, preprocessing, chunking, and metadata enrichment of PDFs, forms, and institutional documents.",
+        "Generated embeddings using OpenAI Embeddings and indexed vectors in Milvus and Pinecone with document-level and chunk-level metadata to support scalable semantic retrieval.",
+        "Implemented hybrid retrieval combining BM25 keyword search, dense vector similarity, metadata filtering, and reranking to improve citation grounding and answer relevance.",
+        "Developed query optimization pipelines using named entity recognition (NER), multi-query expansion, and metadata-aware filtering to increase retrieval precision for ambiguous questions.",
+        "Implemented ReAct-based planning workflows that decomposed complex requests into structured subtasks and dynamically selected tools and agents during action–observation loops.",
+        "Integrated tool calling with internal APIs, CRM systems, vector stores, and external scholarship and labor-market data sources.",
+        "Built short-term conversational memory and long-term persistent memory using vector stores and structured state management to preserve user context across multi-turn interactions.",
+        "Added human-in-the-loop approval workflows for sensitive recommendations, enabling review before final responses were delivered to users.",
+        "Evaluated system quality using ground-truth datasets, citation accuracy checks, tool-call success tracking, and regression testing for agent behavior.",
+        "Implemented confidence-based routing, fallback logic, retry policies, and rate limiting to improve robustness and reduce workflow failures in production.",
+        "Exposed agent services through FastAPI and deployed with Docker and Kubernetes on Amazon EKS.",
+        "Added observability using LangSmith, structured logging, Amazon CloudWatch, and Grafana for tracing, latency analysis, token usage, and retrieval diagnostics.",
+        "Optimized prompts, context-window utilization, and caching strategies, reducing inference costs by 30% while maintaining response quality and grounding fidelity."
       ]
     },
     {
-      "position": "Help Desk Technician",
-      "company": "Carroll University",
-      "location": "Waukesha, WI",
+      "position": "Machine Learning Engineer / MLOps Intern",
+      "company": "TalentScreen",
+      "location": "Dublin, CA",
       "start_date": "2023-09",
       "end_date": "2024-05",
       "current": false,
-      "description": "Provided technical support and training to end users across campus systems.",
+      "description": "Built automated ML pipelines, MLOps infrastructure, and model-serving APIs for academic and talent analytics applications.",
       "achievements": [
-        "Provided first-level technical support and conducted end-user training sessions for software applications",
-        "Managed help desk tickets to resolve hardware and software issues for clients",
-        "Set up new workstation configurations, maintained accurate records, and assisted in system upgrades"
+        "Built automated ETL pipelines to ingest academic policies, course catalogs, and student-support documents from PDFs and databases into analytics-ready storage.",
+        "Implemented data versioning using DVC and stored datasets and model artifacts in Amazon S3 for reproducibility and traceability.",
+        "Developed feature engineering workflows and maintained curated feature sets for downstream machine learning and retrieval applications.",
+        "Orchestrated data and model pipelines using Apache Airflow to automate ingestion, validation, retraining, and deployment tasks.",
+        "Used MLflow for experiment tracking, artifact management, and model version control.",
+        "Built CI/CD pipelines with GitHub Actions to automate testing, container builds, and deployment workflows.",
+        "Deployed model-serving APIs using FastAPI, Docker, and Kubernetes.",
+        "Implemented A/B testing infrastructure and traffic routing to compare model versions in production environments.",
+        "Added monitoring for pipeline latency, resource utilization, and prediction-service health using Amazon CloudWatch and Grafana.",
+        "Established structured logging, alerting, and failure notifications to improve operational reliability."
       ]
     },
     {
-      "position": "Help Desk Technician",
-      "company": "Cardinal Stritch University",
-      "location": "Milwaukee, WI",
+      "position": "Software Engineer Intern",
+      "company": "TalentScreen",
+      "location": "Dublin, CA",
       "start_date": "2021-05",
       "end_date": "2023-05",
       "current": false,
-      "description": "Delivered technical support and supervised student workers in a fast-paced help desk environment.",
+      "description": "Developed backend services, REST APIs, and ETL workflows supporting student analytics and internal applications.",
       "achievements": [
-        "Trained new student workers in essential job functions and supervised task completion in the Track-IT system",
-        "Ensured work was completed professionally and within set deadlines",
-        "Assisted clients in resolving system and technology issues through clear guidance and support"
+        "Developed backend services and REST APIs using Python and FastAPI to support student analytics and internal applications.",
+        "Built ETL workflows to ingest and transform academic, attendance, and demographic data from relational databases.",
+        "Designed relational schemas and optimized complex PostgreSQL queries, reducing batch processing time by 35%.",
+        "Implemented automated batch processing and scheduled workflows using Apache Airflow.",
+        "Containerized applications using Docker and deployed them on Amazon EC2.",
+        "Integrated application logging, monitoring, and alerting using Amazon CloudWatch.",
+        "Collaborated with data science and business teams to productionize predictive analytics solutions and automate reporting workflows."
       ]
     }
   ],
   "education": [
     {
-      "institution": "University of Wisconsin \u2013 Milwaukee",
+      "institution": "University of Wisconsin – Milwaukee",
       "degree": "Master of Science",
-      "field_of_study": "Information Technology Management \u2014 Data Analytics & AI",
+      "field_of_study": "Information Technology Management — Data Analytics & AI",
       "start_date": "2024-08",
       "end_date": "2025-12",
       "gpa": "",
@@ -91,6 +115,11 @@
       "proficiency": 82
     },
     {
+      "name": "Java",
+      "category": "Programming",
+      "proficiency": 70
+    },
+    {
       "name": "TypeScript",
       "category": "Programming",
       "proficiency": 68
@@ -118,12 +147,17 @@
     {
       "name": "LangChain",
       "category": "Agentic AI",
-      "proficiency": 75
+      "proficiency": 80
     },
     {
       "name": "LangGraph",
       "category": "Agentic AI",
-      "proficiency": 75
+      "proficiency": 80
+    },
+    {
+      "name": "LlamaIndex",
+      "category": "Agentic AI",
+      "proficiency": 72
     },
     {
       "name": "MCP",
@@ -138,7 +172,32 @@
     {
       "name": "FastAPI",
       "category": "APIs & Backend",
+      "proficiency": 78
+    },
+    {
+      "name": "OpenAI",
+      "category": "LLM & RAG",
+      "proficiency": 82
+    },
+    {
+      "name": "Anthropic Claude",
+      "category": "LLM & RAG",
+      "proficiency": 78
+    },
+    {
+      "name": "Llama / Mistral",
+      "category": "LLM & RAG",
+      "proficiency": 72
+    },
+    {
+      "name": "FAISS / ChromaDB",
+      "category": "LLM & RAG",
       "proficiency": 75
+    },
+    {
+      "name": "RAGAS",
+      "category": "LLM & RAG",
+      "proficiency": 68
     },
     {
       "name": "Pandas",
@@ -156,6 +215,16 @@
       "proficiency": 82
     },
     {
+      "name": "PyTorch",
+      "category": "Data & ML",
+      "proficiency": 72
+    },
+    {
+      "name": "Hugging Face Transformers",
+      "category": "Data & ML",
+      "proficiency": 70
+    },
+    {
       "name": "Matplotlib / Seaborn",
       "category": "Data & ML",
       "proficiency": 78
@@ -164,6 +233,46 @@
       "name": "Streamlit",
       "category": "Data & ML",
       "proficiency": 75
+    },
+    {
+      "name": "MLflow",
+      "category": "MLOps & DevOps",
+      "proficiency": 75
+    },
+    {
+      "name": "Docker",
+      "category": "MLOps & DevOps",
+      "proficiency": 78
+    },
+    {
+      "name": "Kubernetes",
+      "category": "MLOps & DevOps",
+      "proficiency": 72
+    },
+    {
+      "name": "Apache Airflow",
+      "category": "MLOps & DevOps",
+      "proficiency": 75
+    },
+    {
+      "name": "GitHub Actions",
+      "category": "MLOps & DevOps",
+      "proficiency": 72
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud Platforms",
+      "proficiency": 75
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Databases",
+      "proficiency": 80
+    },
+    {
+      "name": "MongoDB",
+      "category": "Databases",
+      "proficiency": 68
     },
     {
       "name": "Snowflake",
@@ -205,11 +314,20 @@
     },
     {
       "name": "Excelsis Data Agent",
-      "description": "AI-powered data analyst agent built for the Excelsis360 education platform, supporting natural-language querying across multiple data domains.",
+      "description": "Full-stack AI data analyst for the Excelsis360 platform. LangGraph ReAct agent (13 tools) with a ChromaDB RAG layer (Ollama embeddings) for grounded schema and policy answers. SSE-streaming FastAPI backend with JWT auth and rate limiting; React + Tailwind frontend; configurable SQL Server data backend that adapts to any tabular schema.",
       "technologies": [
-        "Python"
+        "Python",
+        "LangGraph",
+        "LangChain",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "SQL Server",
+        "ChromaDB",
+        "Ollama",
+        "Tailwind CSS"
       ],
-      "github_url": "https://github.com/SusanoKevin/Excelsis-Data-Agent",
+      "github_url": "https://github.com/SusanoKevin/Excelsis-Data-Analyst-Agent",
       "live_url": "",
       "start_date": "2026-01",
       "end_date": null,
@@ -217,9 +335,10 @@
     },
     {
       "name": "LangrisserBot",
-      "description": "Automated Python bot project.",
+      "description": "Discord bot for Langrisser Mobile providing slash commands (/hero, /build, /troop, /faction, /bonds) backed by live data fetched from GitHub. Auto-refreshes every 4 hours.",
       "technologies": [
-        "Python"
+        "Python",
+        "Discord.py"
       ],
       "github_url": "https://github.com/SusanoKevin/LangrisserBot",
       "live_url": "",
