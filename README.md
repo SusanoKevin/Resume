@@ -1,6 +1,8 @@
 # Resume — GitHub Pages Site
 
-A static personal resume website hosted on GitHub Pages. All content lives in a single `resume.json` file. Edit the file, run the build script, push — done.
+A static personal resume website, built and deployed with a single command. All content lives in one `resume.json` file — edit it, run the build script, push, and the live site updates: no CMS, no server, no build pipeline to babysit.
+
+The generated site itself is a full interactive resume: Bootstrap 5 layout, Chart.js skill visualizations, and a working contact form — not just a PDF wrapped in HTML.
 
 ## Tech Stack
 
